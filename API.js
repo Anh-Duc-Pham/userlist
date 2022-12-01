@@ -5,9 +5,13 @@ const API = {
     async send(url, method, data) {
         const response = await fetch ( 
             Config.API_URL + url,
+
             {
                 method,
-                body: data ? JSON.stringify(data) : null
+                body: data ? JSON.stringify(data) : null,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             }
         )
         const responseData = await response.json()
@@ -23,7 +27,7 @@ const API = {
     },
     
     async update(url, data) {
-        return this.send(url, 'UPDATE', data)
+        return this.send(url, 'PUT', data)
     },
     async delete(url) {
         return this.send(url, 'DELETE')
