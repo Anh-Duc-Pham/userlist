@@ -52,7 +52,7 @@ API.get('/posts')
 
 // API.post('users', )
 
-// bo m viet
+// bo m viet dasndjasndjsan
 async function generateUser() {
   const users = await API.get('/posts');
   const tableParent = document.querySelector('.table-user');
