@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        #user-list  {
+            margin: 0 auto;
+            width: 200px;
+        }
+        #userList input{
+            position: fixed;
+            right: 0px;
+            top: 0px;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        table th {
+            border: 1px solid;
+            
+        }
+        td {
+            border: 1px solid;
+            height: 50px;
+        }
+        header {
+            margin: 20px 50px;
+            width: 100%;
+        }
+
+        .avatar {
+          border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <input type="text" id="userSearch" placeholder="Search User">
+        <div class = 'table-user'></div>
+
+    </header>
+    <div id="userList">
+
+    </div>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
